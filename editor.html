@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>密室逃脫編輯器</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 編輯器專用樣式：使用原有暗色風格，但添加表單布局 */
+        .editor-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 8px;
+        }
+        .editor-container h2 {
+            font-size: 1.5rem;
+            color: #f4e2a0;
+            margin-bottom: 0.5rem;
+        }
+        .editor-container h3 {
+            font-size: 1.2rem;
+            color: #e4cf9d;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .editor-container label {
+            display: block;
+            margin-top: 0.5rem;
+            font-weight: bold;
+            color: #d8c7a0;
+        }
+        .editor-container input[type="text"],
+        .editor-container textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-top: 0.25rem;
+            background-color: #2a2a2a;
+            color: #fff;
+            border: 1px solid #444;
+            border-radius: 4px;
+        }
+        .editor-container input[type="file"] {
+            margin-top: 0.5rem;
+            color: #d8c7a0;
+        }
+        .editor-container .room-section {
+            border-top: 1px solid #444;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+        }
+        .editor-actions {
+            margin-top: 2rem;
+            text-align: center;
+        }
+        .editor-actions button {
+            margin: 0 0.5rem;
+        }
+        .small-input {
+            width: 80px;
+        }
+        .reward-input {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">密室逃脫編輯器</h1>
+        <p class="intro">
+            透過下方表單自訂三間房間的內容。可上傳背景圖片、編輯物件名稱與線索、設定各密碼箱的密碼與過關獎勵。儲存後將存至瀏覽器暫存，再點擊預覽即可體驗自訂的密室。
+        </p>
+        <div class="editor-container" id="editorContainer">
+            <!-- 動態生成編輯表單 -->
+        </div>
+        <div class="editor-actions">
+            <button class="btn" id="saveConfig">儲存設定</button>
+            <button class="btn" id="previewGame">預覽遊戲</button>
+            <button class="btn" id="resetConfig">清除設定</button>
+        </div>
+    </div>
+
+    <script src="editor.js"></script>
+</body>
+</html>

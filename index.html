@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>《一桿稱仔》密室逃脫原型</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 首頁 -->
+    <section id="home" class="section active">
+        <div class="container">
+            <h1 class="title" id="homeTitle">《一桿稱仔》輪迴密室</h1>
+            <p class="intro" id="homeIntro">
+                秦德參死後，在地藏王的引導下，踏入三個神秘的房間。每一房都藏著過往因果的線索，
+                等待你揭開。透過探索與解謎，你將逐步看見個人悲劇背後的更大結構。
+            </p>
+            <button id="startButton" class="btn">開始</button>
+        </div>
+    </section>
+
+    <!-- 房間容器 -->
+    <div id="roomsContainer"></div>
+
+    <!-- 結尾頁 -->
+    <section id="ending" class="section">
+        <div class="container">
+            <h2 class="title">結局</h2>
+            <p class="intro" id="endingIntro">
+                三間房屋的真相都已揭示。你即將離開這段輪迴，但先決定你要帶走的理解。
+            </p>
+            <!-- 選項與結局文字將由 script.js 動態生成 -->
+        </div>
+    </section>
+
+    <!-- 線索彈窗 -->
+    <div id="clueModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <p id="clueText"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

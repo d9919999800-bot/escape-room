@@ -1,0 +1,267 @@
+/* 主樣式檔案 */
+body {
+    margin: 0;
+    font-family: "Noto Serif TC", "Microsoft JhengHei", serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* 通用容器 */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* 區段樣式 */
+.section {
+    display: none;
+    min-height: 100vh;
+    padding-top: 3rem;
+}
+
+.section.active {
+    display: block;
+}
+
+/* 標題樣式 */
+.title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #f4f4f4;
+}
+
+.intro {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #cccccc;
+}
+
+/* 按鈕樣式 */
+.btn {
+    background-color: #4a3d2f;
+    color: #f8f2e0;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #6b5947;
+}
+
+/* 房間標題 */
+.room-title {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: #f5e1a4;
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.5rem;
+}
+
+/* 物件區 */
+.objects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.object-card {
+    background-color: #2a2a2a;
+    padding: 1rem;
+    border-radius: 6px;
+    border: 1px solid #444;
+    cursor: pointer;
+    width: 150px;
+    transition: transform 0.2s;
+}
+
+.object-card:hover {
+    transform: translateY(-4px);
+    background-color: #3a3a3a;
+}
+
+.object-card h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: #e4cf9d;
+}
+
+/* 密碼箱區 */
+.codes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.code-box {
+    background-color: #2a2a2a;
+    padding: 1rem;
+    border: 1px solid #444;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.code-box h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+    color: #e4cf9d;
+}
+
+.code-box input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: #1d1d1d;
+    color: #fff;
+}
+
+.code-box button {
+    margin-top: 0.5rem;
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #4a3d2f;
+    color: #f8f2e0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.code-box button:hover {
+    background-color: #6b5947;
+}
+
+.code-box .status {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #e0e0e0;
+}
+
+/* 線索彈窗 */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.6); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #2f2f2f;
+    margin: 10% auto; /* 10% from the top and centered */
+    padding: 20px;
+    border: 1px solid #444;
+    width: 80%;
+    max-width: 600px;
+    color: #f0f0f0;
+    border-radius: 6px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #fff;
+}
+
+/* 結尾頁 選項區 */
+.ending-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.option-card {
+    background-color: #2a2a2a;
+    padding: 1rem;
+    border: 1px solid #444;
+    border-radius: 6px;
+    width: 180px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    text-align: center;
+}
+
+.option-card:hover {
+    transform: translateY(-4px);
+    background-color: #3a3a3a;
+}
+
+.option-card h3 {
+    margin-top: 0;
+    font-size: 1rem;
+    color: #e4cf9d;
+}
+
+.ending-message {
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    color: #d7d7d7;
+}
+
+/* 編輯器容器在小螢幕的適配 */
+@media (max-width: 600px) {
+    .editor-container {
+        width: 100% !important;
+        padding: 1rem !important;
+    }
+}
+
+/* 響應式設計：手機支援 */
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem;
+        width: 90%;
+    }
+    .objects {
+        flex-direction: column;
+        align-items: center;
+    }
+    .object-card {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .codes {
+        width: 100%;
+    }
+    .code-box {
+        max-width: none;
+        width: 100%;
+    }
+    .ending-options {
+        flex-direction: column;
+        align-items: center;
+    }
+    .option-card {
+        width: 100%;
+    }
+    .modal-content {
+        width: 95%;
+    }
+}
